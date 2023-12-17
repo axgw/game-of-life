@@ -66,11 +66,12 @@ def next_board_state(state):
 
 
 def render(state):
+    width, height = len(state), len(state[0])
     display_as = {DEAD: ' ', ALIVE: 'o'}
     lines = []
-    for y in range(0, len(state[0])):
+    for x in range(0, width):
         line = ''
-        for x in range(0, len(state)):
+        for y in range(0, height):
             line += display_as[state[x][y]]
         lines.append(line)
     print("\n".join(lines))
