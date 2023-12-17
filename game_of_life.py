@@ -19,15 +19,18 @@ def render(board_state: []):
         print('|', end='')
         for j in range(len(board_state[i])):
             if board_state[i][j] == 1:
-                print('#', end='')
+                print('O', end='')
             if board_state[i][j] == 0:
-                print(' ', end='')
+                print('.', end='')
         print('|', end='')
         print()
     print('-' * (len(board_state[0]) + 2))
 
 
-render(random_state(30,20))
+def next_board_state(initial_state: []):
+    new_state = dead_state()
+
+
 
 
 
