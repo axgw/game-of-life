@@ -48,7 +48,7 @@ class LifeTestCases(unittest.TestCase):
         result = next_board_state(init_state)
         self.assertTrue(result == expected_next_state)
 
-    # TEST 4:
+    # TEST 4: Any live cell with 0 or 1 live neighbors becomes dead, due to underpopulation
     def test_death_by_underpopulation(self):
         init_state = [
             [0, 0, 0],
